@@ -8,6 +8,8 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
+    "make-symlink-node-module": "export RNDROOT=~/node_modules/ci-react-with-circle-ci/node_modules && mkdir -p $RNDROOT && ln -svnf $RNDROOT node_modules",
+    "preinstall": "npm run make-symlink-node-module",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
